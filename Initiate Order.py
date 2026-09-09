@@ -5,19 +5,19 @@ def main():
     Initiate_Order = []
 
     include_midgalad = input("Is Midgalad in the Fight? (y/n): ")
-    if include_midgalad.lower() == 'y':
+    if include_midgalad.lower() == 'y' or include_midgalad.lower() == 'yes':
         midgalad_roll = int(input("What did Midgalad roll?: "))
         Initiate_Order = [("Midgalad", midgalad_roll)]
 
 
     include_erran = input("Is Erran in the Fight? (y/n): ")
-    if include_erran.lower() == 'y':
+    if include_erran.lower() == "y" or include_erran.lower() == "yes":
         erran_roll = int(input("What did Erran roll?: "))
         Initiate_Order.append(("Erran", erran_roll))
 
 
     include_odin = input("Is L in the Fight? (y/n): ")
-    if include_odin.lower() == 'y':
+    if include_odin.lower() == 'y' or include_odin.lower() == 'yes':
         odin_roll = int(input("What did L roll?: "))
         Initiate_Order.append(("L", odin_roll))
 
