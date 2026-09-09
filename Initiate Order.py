@@ -1,13 +1,22 @@
 def main():
-    midgalad_roll = int(input("What did Midgalad roll?: "))
-    erran_roll = int(input("What did Erran roll?: "))
-    odin_roll = int(input("What did Odin roll?: "))
 
-    Initiate_Order = [
-        ("Midgalad", midgalad_roll),
-        ("Erran", erran_roll),
-        ("Odin", odin_roll)
-    ]
+    Initiate_Order = []
+
+    include_midgalad = input("Is Midgalad in the Fight? (y/n): ")
+    if include_midgalad.lower() == 'y':
+        midgalad_roll = int(input("What did Midgalad roll?: "))
+        Initiate_Order = [("Midgalad", midgalad_roll)]
+    
+
+    include_erran = input("Is Erran in the Fight? (y/n): ")
+    if include_erran.lower() == 'y':
+        erran_roll = int(input("What did Erran roll?: "))
+        Initiate_Order.append(("Erran", erran_roll))
+
+    include_odin = input("Is L in the Fight? (y/n): ")
+    if include_odin.lower() == 'y':
+        odin_roll = int(input("What did L roll?: "))
+        Initiate_Order.append(("L", odin_roll))
 
     enemies = int(input("How many NPCs?: "))
 
