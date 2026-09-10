@@ -1,5 +1,8 @@
 import os
 
+def sort_initiative_order(characters):
+    return sorted(characters, key=lambda x: x[1], reverse=True)
+
 def main():
 
     Initiate_Order = []
@@ -37,7 +40,7 @@ def main():
 
         Initiate_Order.append((enemy_name, roll))
 
-    Initiate_Order = sorted(Initiate_Order, key=lambda x: x[1], reverse=True)
+    Initiate_Order = sort_initiative_order(Initiate_Order)
 
     print("\n--- INITIATIVE ORDER ---")
     for position, (name, roll) in enumerate(Initiate_Order, start=1):
