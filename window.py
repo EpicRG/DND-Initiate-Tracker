@@ -10,7 +10,7 @@ class App(customtkinter.CTk):
         super().__init__()
 
         self.title("DND Initiative Tracker")
-        self.geometry("900x700")
+        self.geometry("600x700")
 
         # Reserve space for the active and dead initiative lists.
         bottom_frame = customtkinter.CTkFrame(master=self)
@@ -229,7 +229,7 @@ class App(customtkinter.CTk):
             self.dead_characters,
         )
         # Show horizontal scrolling only when the list becomes wide.
-        if len(initiative_order) > 9:
+        if len(initiative_order) >= 9:
             self.order_scrollbar.pack(side="bottom", fill="x", padx=10, pady=(0, 8))
         else:
             self.order_scrollbar.pack_forget()
